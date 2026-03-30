@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Plan",
+    "description": "Perfect for individuals starting their journey.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["5 Basic templates", "Manual optimization", "Export to PDF"],
+    "buttonText": "Get Started"
+  },
+  {
+    "id": 2,
+    "name": "Professional",
+    "description": "Best for freelancers and job seekers.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["50+ templates", "ATS optimization", "Export to PDF", "Email support"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 3,
+    "name": "Enterprise",
+    "description": "Full access for power users and teams.",
+    "price": 149,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": ["Unlimited templates", "AI ATS optimization", "Priority support", "Custom branding"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 4,
+    "name": "Resume Pro",
+    "description": "Specialized tools for professional resumes.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "Top Rated",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF", "Cover letter builder"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 5,
+    "name": "Growth Hack",
+    "description": "For those who want to scale fast.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "Trending",
+    "tagType": "new",
+    "features": ["All Pro features", "LinkedIn profile review", "24/7 Live chat"],
+    "buttonText": "Upgrade Now"
+  },
+  {
+    "id": 6,
+    "name": "Lifetime Access",
+    "description": "Pay once, use forever with all future updates.",
+    "price": 299,
+    "period": "one-time",
+    "tag": "Best Value",
+    "tagType": "best-seller",
+    "features": ["Lifetime updates", "Premium support", "All current & future templates"],
+    "buttonText": "Buy Now"
+  }
+]
