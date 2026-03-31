@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection'
 import NavBar from './components/NavBar'
 import StatsSection from './components/StatsSection'
 import { useState } from 'react'
+import PosterSection from './components/PosterSection/PosterSection'
 
 
 const getProducts = async () => {
@@ -19,6 +20,10 @@ const productsPromise = getProducts()
 function App() {
     const [activeTab, setActiveTab] = useState("Products")
     const [carts , setCarts] = useState([])
+    const handleRemove = (id) => {
+        const remainingCarts = carts.filter(item => item.id !== id);
+        setCarts(remainingCarts);
+    };
 
   return (
     <>
@@ -38,7 +43,8 @@ function App() {
       {activeTab === "Products" ? <Products setCarts = {setCarts}
        carts ={carts}  productsPromise={productsPromise}  /> : null}
 
-      {activeTab === "Cart" ?<CartSection carts ={carts} /> : null }
+      {activeTab === "Cart" ?<CartSection carts ={carts} handleRemove={handleRemove} setCarts={setCarts} /> : null }
+      <PosterSection/>
     </>
   )
 }
