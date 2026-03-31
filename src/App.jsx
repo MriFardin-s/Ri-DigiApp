@@ -8,6 +8,7 @@ import NavBar from './components/NavBar'
 import StatsSection from './components/StatsSection'
 import { useState } from 'react'
 import PosterSection from './components/PosterSection/PosterSection'
+import GetStarted from './components/GetStarted'
 
 
 const getProducts = async () => {
@@ -44,7 +45,8 @@ function App() {
        carts ={carts}  productsPromise={productsPromise}  /> : null}
 
       {activeTab === "Cart" ?<CartSection carts ={carts} handleRemove={handleRemove} setCarts={setCarts} /> : null }
-      <PosterSection/>
+      <GetStarted/>
+      {/* <PosterSection/> */}
     </>
   )
 }
