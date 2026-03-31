@@ -21,7 +21,7 @@ const CardSection = () => {
                 </p>
 
 
-                <div className="flex justify-center mt-10">
+                {/* <div className="flex justify-center mt-10">
 
                     <div className="flex items-center bg-white border border-gray-100 rounded-full p-1.5 shadow-sm">
 
@@ -36,7 +36,7 @@ const CardSection = () => {
                         </button>
 
                     </div>
-                </div>
+                </div> */}
             </div>
            
         </section>

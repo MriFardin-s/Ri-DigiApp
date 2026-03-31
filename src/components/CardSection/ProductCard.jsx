@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product,carts, setCarts }) => {
     const [isBuy, setIsBuy] = useState(false)
     const handleIsBuy = () => {
         setIsBuy(!isBuy)
+        setCarts([...carts,product])
     }
     return (
 

@@ -9,7 +9,7 @@ const navigationData = [
     { id: 4, name: 'Testimonials' },
     { id: 5, name: 'FAQ' }
 ];
-const NavBar = () => {
+const NavBar = ({ cartCount }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = navigationData.map(nav => <NavName nav={nav} key={nav.id} ></NavName>)
     return (
@@ -35,12 +35,26 @@ const NavBar = () => {
 
 
             <div className='flex items-center gap-6 shrink-0'>
-                <div className="flex items-center gap-2 cursor-pointer group">
-                    <ShoppingCart className='hidden sm:block text-gray-700' />
-                    <p className="font-semibold text-[#101727] hidden sm:block">Login</p>
+                <div className="flex items-center gap-4 cursor-pointer group">
+
+                    <div className="relative p-1">
+                        <ShoppingCart className='text-gray-700 w-6 h-6' />
+
+
+                        {cartCount > 0 && (
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] flex items-center justify-center border-2 border-white">
+                                {cartCount}
+                            </span>
+                        )}
+                    </div>
+
+                    <p className="font-semibold text-[#101727] hidden sm:block hover:text-[#4F39F6] transition-colors">
+                        Login
+                    </p>
                 </div>
 
-                <button className='rounded-full py-2.5 px-6 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-medium hover:opacity-90 transition-all shadow-md'>
+
+                <button className='rounded-full py-2.5 px-6 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-medium hover:opacity-90 transition-all shadow-md active:scale-95'>
                     Get Started
                 </button>
             </div>
