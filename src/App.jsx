@@ -1,9 +1,17 @@
 
 import './App.css'
 import CardSection from './components/CardSection/CardSection'
+import Products from './components/CardSection/Products'
 import HeroSection from './components/HeroSection'
 import NavBar from './components/NavBar'
 import StatsSection from './components/StatsSection'
+
+const getProducts = async() => {
+    const res = await fetch ("/cardData.json")
+    
+    return res.json()
+}
+ const productsPromise = getProducts()
 
 function App() {
   
@@ -16,6 +24,7 @@ function App() {
         <HeroSection/>
         <StatsSection/>
         <CardSection/>
+         <Products productsPromise = {productsPromise} />
     </>
   )
 }

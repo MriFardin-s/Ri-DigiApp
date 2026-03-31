@@ -1,6 +1,10 @@
 import React from 'react';
+import Products from './Products';
+
+
 
 const CardSection = () => {
+   
     return (
         <section className='container mx-auto py-20 px-6'>
             <div className='space-y-4 text-center flex flex-col items-center justify-center'>
@@ -34,6 +38,7 @@ const CardSection = () => {
                     </div>
                 </div>
             </div>
+           
         </section>
     );
 };

@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "img":"/products/writing_2327400 1.png",
     "name": "Starter Plan",
     "description": "Perfect for individuals starting their journey.",
     "price": 0,
@@ -12,6 +13,7 @@
   },
   {
     "id": 2,
+    "img":"/products/writing_2327400 1.png",
     "name": "Professional",
     "description": "Best for freelancers and job seekers.",
     "price": 19,
@@ -23,6 +25,7 @@
   },
   {
     "id": 3,
+    "img":"/products/design-tool.png",
     "name": "Enterprise",
     "description": "Full access for power users and teams.",
     "price": 149,
@@ -34,6 +37,7 @@
   },
   {
     "id": 4,
+    "img":"/products/portfolio.png",
     "name": "Resume Pro",
     "description": "Specialized tools for professional resumes.",
     "price": 29,
@@ -45,6 +49,7 @@
   },
   {
     "id": 5,
+    "img":"/products/operation.png",
     "name": "Growth Hack",
     "description": "For those who want to scale fast.",
     "price": 49,
@@ -56,6 +61,7 @@
   },
   {
     "id": 6,
+    "img":"/products/social-media.png",
     "name": "Lifetime Access",
     "description": "Pay once, use forever with all future updates.",
     "price": 299,
@@ -65,4 +71,4 @@
     "features": ["Lifetime updates", "Premium support", "All current & future templates"],
     "buttonText": "Buy Now"
   }
-]
+] 
