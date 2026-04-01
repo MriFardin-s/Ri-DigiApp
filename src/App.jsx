@@ -11,6 +11,7 @@ import PosterSection from './components/PosterSection/PosterSection'
 import GetStarted from './components/GetStarted'
 import Pricing from './components/Pricing'
 import Footer from './components/FooterSection/Footer'
+import { toast, ToastContainer } from 'react-toastify'
 
 
 const getProducts = async () => {
@@ -26,6 +27,7 @@ function App() {
     const handleRemove = (id) => {
         const remainingCarts = carts.filter(item => item.id !== id);
         setCarts(remainingCarts);
+        toast.error("Item Deleted Successfully")
     };
 
   return (
@@ -57,6 +59,9 @@ function App() {
       <footer>
         <Footer/>
       </footer>
+      <ToastContainer/>
+      
+      
     </>
   )
 }

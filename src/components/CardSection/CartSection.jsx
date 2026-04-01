@@ -1,11 +1,12 @@
 import { ShoppingCart } from 'lucide-react';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const CartSection = ({ carts, handleRemove, setCarts }) => {
     const handleCheckout = () => {
 
         setCarts([]);
-
+        toast.success('Payment Done!')
     };
     return (
         <div className="p-10 max-w-4xl mx-auto shadow-sm">

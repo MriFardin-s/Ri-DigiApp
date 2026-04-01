@@ -1,12 +1,19 @@
 import { Check } from 'lucide-react';
 import React from 'react';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({ product,carts, setCarts }) => {
     const [isBuy, setIsBuy] = useState(false)
     const handleIsBuy = () => {
-        setIsBuy(!isBuy)
+        setIsBuy(true)
+        const isFound = carts.find((item)=> item.id === product.id )
+        if (isFound){
+            toast.error("Item Already added to Cart")
+            return
+        }
         setCarts([...carts,product])
+        toast.success('Item Added to Cart!')
     }
     return (
 
@@ -48,14 +55,14 @@ const ProductCard = ({ product,carts, setCarts }) => {
 
 
             <div className="mt-auto pt-4">
-                <button onClick={handleIsBuy} className={`w-full ${
+                <button onClick={handleIsBuy}  className={`w-full ${
                     isBuy
                         ? "bg-green-500 hover:bg-green-600 text-white"
                         : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-[#6D28D9] text-[#FFFFFF]"}
                         
                         text-[#FFFFFF] font-bold py-4 rounded-2xl transition-colors`}>
 
-                    {isBuy ? "add to Cart" : "Buy Now"}
+                    {isBuy ? "added to Cart" : "Buy Now"}
                 </button>
             </div>
         </div>
