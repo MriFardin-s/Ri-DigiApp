@@ -9,6 +9,7 @@ import StatsSection from './components/StatsSection'
 import { useState } from 'react'
 import PosterSection from './components/PosterSection/PosterSection'
 import GetStarted from './components/GetStarted'
+import Pricing from './components/Pricing'
 
 
 const getProducts = async () => {
@@ -47,6 +48,7 @@ function App() {
       {activeTab === "Cart" ?<CartSection carts ={carts} handleRemove={handleRemove} setCarts={setCarts} /> : null }
       <GetStarted/>
       {/* <PosterSection/> */}
+      <Pricing/>
     </>
   )
 }
