@@ -6,13 +6,13 @@ const PricingData = ({ plan }) => {
         <div
 
             className={`relative rounded-[2.5rem] p-10 transition-all duration-500 h-full flex flex-col ${plan.isPopular
-                    ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-2xl scale-105 z-10"
+                    ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-2xl scale-105 z-10"
                     : "bg-[#F9FAFC] text-[#101727] border border-gray-100 shadow-sm hover:shadow-xl"
                 }`}
         >
             
             {plan.isPopular ?  (
-                <div className="absolute -top-4  right-34 bg-[#FEF3C6] text-[#BB4D00] px-4 py-1 rounded-full text-sm font-medium shadow-sm">
+                <div className="absolute -top-4  right-43 bg-[#FEF3C6] text-[#BB4D00] px-4 py-1 rounded-full text-sm font-medium shadow-sm">
                     Most Popular
                 </div>
             ) : null}
@@ -41,7 +41,7 @@ const PricingData = ({ plan }) => {
             
             <button className={`w-full py-4 rounded-full font-bold transition-all duration-300 ${plan.isPopular
                     ? "bg-[#FFFFFF] text-[#6517ec] hover:bg-gray-100"
-                    : "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white hover:bg-[#6D28D9]"
+                    : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:bg-[#6D28D9]"
                 }`}>
                 {plan.buttonText}
             </button>

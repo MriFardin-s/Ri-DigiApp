@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react';
 import React from 'react';
 import { useState } from 'react';
 
@@ -38,7 +39,7 @@ const ProductCard = ({ product,carts, setCarts }) => {
                 <div className="space-y-3 mb-8">
                     {product.features?.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-gray-600">
-                            <span className="text-green-500 mr-2 text-lg">✓</span>
+                            <span className="text-[#30B868] mr-2 text-lg"><Check/></span>
                             <span className="text-sm font-medium">{feature}</span>
                         </div>
                     ))}
@@ -50,7 +51,7 @@ const ProductCard = ({ product,carts, setCarts }) => {
                 <button onClick={handleIsBuy} className={`w-full ${
                     isBuy
                         ? "bg-green-500 hover:bg-green-600 text-white"
-                        : "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:bg-[#6D28D9] text-[#FFFFFF]"}
+                        : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-[#6D28D9] text-[#FFFFFF]"}
                         
                         text-[#FFFFFF] font-bold py-4 rounded-2xl transition-colors`}>
 

@@ -40,7 +40,7 @@ const GetStarted = () => {
 
                         <div key={step.id} className="relative group w-full h-full ">
 
-                            <div className="absolute top-4 right-4 w-11 h-11 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full flex items-center  justify-center font-bold text-base z-10 shadow-lg">
+                            <div className="absolute top-4 right-4 w-11 h-11 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full flex items-center  justify-center font-bold text-base z-10 shadow-lg">
                                 {step.id}
                             </div>
 

@@ -9,7 +9,7 @@ const navigationData = [
     { id: 4, name: 'Testimonials' },
     { id: 5, name: 'FAQ' }
 ];
-const NavBar = ({ cartCount }) => {
+const NavBar = ({ cartCount, setActiveTab }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = navigationData.map(nav => <NavName nav={nav} key={nav.id} ></NavName>)
     return (
@@ -23,7 +23,7 @@ const NavBar = ({ cartCount }) => {
                     {isMenuOpen ? <X /> : <Menu />}
                 </div>
 
-                <h1 className="text-[1.5rem] sm:text-[1.75rem] font-bold bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent shrink-0">
+                <h1 className="text-[1.5rem] sm:text-[1.75rem] font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent shrink-0">
                     DigiTools
                 </h1>
             </div>
@@ -37,12 +37,12 @@ const NavBar = ({ cartCount }) => {
             <div className='flex items-center gap-6 shrink-0'>
                 <div className="flex items-center gap-4 cursor-pointer group">
 
-                    <div className="relative p-1">
+                    <div onClick={() => setActiveTab("Cart")} className="relative p-1 cursor-pointer ">
                         <ShoppingCart className='text-gray-700 w-6 h-6' />
 
 
                         {cartCount > 0 && (
-                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] flex items-center justify-center border-2 border-white">
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-4.5 flex items-center justify-center border-2 border-white">
                                 {cartCount}
                             </span>
                         )}
@@ -54,7 +54,7 @@ const NavBar = ({ cartCount }) => {
                 </div>
 
 
-                <button className='rounded-full py-2.5 px-6 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-medium hover:opacity-90 transition-all shadow-md active:scale-95'>
+                <button className='rounded-full py-2.5 px-6 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-medium hover:opacity-90 transition-all shadow-md active:scale-95'>
                     Get Started
                 </button>
             </div>

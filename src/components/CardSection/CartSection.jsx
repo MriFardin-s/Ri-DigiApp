@@ -55,7 +55,7 @@ const CartSection = ({ carts, handleRemove, setCarts }) => {
                                     ${carts.reduce((sum, cart) => sum + Number(cart.price), 0)}
                                 </span>
                             </div>
-                            <button onClick={handleCheckout} className="w-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:bg-[#6D28D9] text-[#FFFFFF] font-bold py-4 rounded-2xl shadow-lg transition-all">
+                            <button onClick={handleCheckout} className="w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:bg-[#6D28D9] text-[#FFFFFF] font-bold py-4 rounded-2xl shadow-lg transition-all">
                                 Proceed To Checkout
                             </button>
                         </div>
@@ -63,7 +63,7 @@ const CartSection = ({ carts, handleRemove, setCarts }) => {
                 ) : (
 
                     <div className="py-20 text-center items-center">
-                        <div className="text-[420px] mb-8 flex justify-center w-full">
+                        <div className="py-20 text-center flex flex-col items-center justify-center">
                             <ShoppingCart className='text-gray-300 w-24 h-24' />
                         </div>
                         <h2 className="text-xl font-bold text-gray-400">
